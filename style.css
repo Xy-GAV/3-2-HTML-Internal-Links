@@ -1,0 +1,54 @@
+
+section{
+    width:50vw;
+    height:95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book{
+    background-color:gray;
+    width:50vw;
+    height:95vh;
+    perspective: 600px;
+    position:relative;
+    border-radius: 20px 0 0 20px;
+}
+.book::before{
+    content:'';
+    position:absolute;
+    background-color:cornflowerblue;
+    width:50vw;
+    height:95vh;
+    left:50vw;
+    border-radius: 0 20px 20px 0;
+    transform-origin: center left;
+    transform: rotateY(180deg);
+    transition: 1s ease all;
+}
+
+.book:hover::before{
+    transform: rotateX(0deg);
+}
+
+.book .pg {
+    position:absolute;
+    width:50%;
+    top:0;
+    bottom:0;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.book .pg #pg1 {
+   background-color: darkcyan;
+   border-radius: 20px 0 0 20px;
+}
+
+.book .pg #pg1 {
+   background-color:dimgray;
+   border-radius: 20px 0 0 20px;
+}
